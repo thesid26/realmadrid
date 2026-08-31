@@ -1,0 +1,175 @@
+/* ===== Paleta de cores e fontes ===== */
+:root {
+    --grana: #c0dd1e;      /* azul merengue */
+    --vermelho: #d10000;   /* detalhe de destaque */
+    --texto: #bac91e;      /* cor do texto/rodapé */
+    --branco: #ffffff;
+    --fundo: #f4f4f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    color: var(--texto);
+    padding-top: 70px; /* compensa o header fixo */
+     background-image: url('real2.jpg'); /* Imagem de fundo da página toda */
+     background-size: cover;      /* cobre toda a área */
+    background-position: center; /* centraliza a imagem */
+    background-repeat: no-repeat;/* evita repetição */
+    height: 100vh;  
+
+    /* Imagem de fundo da página toda */
+  
+}
+
+/* ===== Header / Menu ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--branco);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--grana);
+    text-decoration: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--vermelho);
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: var(--grana);
+}
+
+/* ===== Hero ===== */
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 90px 24px 60px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--grana);
+    border: 2px solid var(--grana);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 16px;
+    color: var(--grana);
+    font-size: 44px;
+}
+
+.hero p {
+    color: var(--texto);
+    font-size: 18px;
+}
+
+/* ===== Seção de destaques / Cards ===== */
+.destaques {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    text-align: center;
+}
+
+.destaques h2 {
+    margin-bottom: 30px;
+    color: var(--grana);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 280px;
+    max-width: 320px;
+    background-color: var(--branco);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.card h3 {
+    color: var(--vermelho);
+    margin-top: 0;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--texto);
+    color: var(--branco);
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 700px) {
+    .header-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    body {
+        padding-top: 110px;
+    }
+}
